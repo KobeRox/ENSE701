@@ -40,6 +40,7 @@ function App() {
       <div class="p-3 mb-2 bg-success text-white">Information on a tree Special  will display here/n</div>
       <div class="p-3 mb-2 bg-warning text-white">Information on a tree Special  will display here</div>
       <div class="p-3 mb-2 bg-danger text-white">Information on a tree Special  will display here</div>
+      <div>Hello Tommy</div>
     </>
   );
 }
