@@ -18,7 +18,7 @@ function App() {
     <>
       <Navbar bg="dark" variant="dark">
         <Navbar.Brand href="#home">PlantATree</Navbar.Brand>
-        <Nav className="mr-auto">
+        <Nav className="plant_a_tree">
           <Nav.Link href="#home">Home</Nav.Link>
           <Nav.Link href="#trees">Trees</Nav.Link>
           <Nav.Link href="#pricing">Pricing</Nav.Link>
