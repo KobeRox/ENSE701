@@ -20,7 +20,7 @@ function App() {
         <Navbar.Brand href="#home">PlantATree</Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#trees">Tree's</Nav.Link>
+          <Nav.Link href="#trees">Trees</Nav.Link>
           <Nav.Link href="#pricing">Pricing</Nav.Link>
           <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
