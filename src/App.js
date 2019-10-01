@@ -10,7 +10,7 @@ import Nav from 'react-bootstrap/Nav';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-
+import Trees from './TreeList';
 import './App.css';
 
 function App() {
@@ -39,7 +39,7 @@ function App() {
       
       <div class="p-3 mb-2 bg-success text-white">Information on a tree Special  will display here/n</div>
       <div class="p-3 mb-2 bg-warning text-white">Information on a tree Special  will display here</div>
-      <div class="p-3 mb-2 bg-danger text-white">Information on a tree Special  will display here</div>
+      <div class="p-3 mb-2 bg-danger text-white">Information on a tree Special  will maybe display here</div>
     </>
   );
 }
