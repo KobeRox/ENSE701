@@ -6,7 +6,6 @@ const Trees = () => {
     // sets the states for the chosen things
     const [trees, setTrees] = useState('');
     const [search, setSearch] = useState('');
-    const [query, setQuery] = useState('');
 
     // updates the search bar with user input and finds the user input
     const updateSearch = e => { 
@@ -17,8 +16,12 @@ const Trees = () => {
     // Enables the user to type in the search bar
     const getSearch = e => {
         e.preventDefault();
-        setQuery(search);
         setSearch('');
+    }
+
+    const getRecipes = () => {
+        //TODO: get tree details from somewhere, details such as name, description, prices
+
     }
 
     return (
