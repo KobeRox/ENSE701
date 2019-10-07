@@ -2,6 +2,8 @@
 <html lang="en">
 
     <head>
+        <title>PlantATree</title>
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
@@ -45,141 +47,57 @@
                             <a class="nav-link" href="productPage.html">Products <span class="sr-only">(current)</span></a>
                         </li>
                     </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="cart.html">Shopping Cart</a>
+                        </li>
+                    </ul>
     
                 </div>
             </div>
         </nav>
         <!-- Products -->
         <div class="container">
-            <form class="form-inline my-2 my-md-0" method="POST" action="products.php">
-                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-                <button class="btn btn-warning" name="submit" id="show" onclick="getData()">Click</button>
-    
-                <!-- TODO: bring out the data from the database -->
-    
-                <div id="output"></div>
-            </form>
-    
-            <br>
+
             <h3 class="h3">Tree Product Demo </h3>
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="product-grid">
-                        <div class="product-image">
-                            <!-- can input image here -->
-                            <a href="#">
-                                <img class="pic-1" src="/src/images/Pohutukawa.jpg">
-                            </a>
-                            <ul class="social">
-                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                            <span class="product-new-label">Sale</span>
-                            <span class="product-discount-label">20%</span>
-                        </div>
-                        <!-- Brings out a star for rating -->
-                        <ul class="rating">
-                            <li class="fa fa-star"></li>
-                            <li class="fa fa-star"></li>
-                            <li class="fa fa-star"></li>
-                            <li class="fa fa-star"></li>
-                            <li class="fa fa-star disable"></li>
-                        </ul>
-                        <div class="product-content">
-                            <h3 class="title"><a href="#">Pohutukawa</a></h3>
-                            <div class="price">$16.00
-    
+            
+            <form>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="pics_in_a_row">
+                            <div class="img1">
+                                <a href="cart.html">
+                                    <img src="/src/images/Pohutukawa.jpg" alt="">
+                                
+                                    <p class="text-center">Grapefruit ($29.99)</p>
+                                </a>
                             </div>
-                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="pics_in_a_row">
+                            <div class="img1">
+                                <a href="cart.html">
+                                    <img src="/src/images/feijoa.jpg" alt="">
+                                
+                                    <p class="text-center">Feijoa ($22.99)</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="pics_in_a_row">
+                            <div class="img1">
+                                <a href="cart.html">
+                                    <img src="/src/images/olive.jpg" alt="">
+                                
+                                    <p class="text-center">Olive Tree($19.99)</p>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="product-grid">
-                        <div class="product-image">
-                            <!-- Input tree photo here -->
-                            <ul class="social">
-                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                            <span class="product-new-label">Sale</span>
-                            <span class="product-discount-label">50%</span>
-                        </div>
-                        <ul class="rating">
-                            <li class="fa fa-star"></li>
-                            <li class="fa fa-star"></li>
-                            <li class="fa fa-star"></li>
-                            <li class="fa fa-star"></li>
-                            <li class="fa fa-star"></li>
-                        </ul>
-                        <div class="product-content">
-                            <h3 class="title"><a href="#">Kahikatea</a></h3>
-                            <div class="price">$5.00
-    
-                            </div>
-                            <a class="add-to-cart" href="">+ Add To Cart</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="product-grid">
-                        <div class="product-image">
-                            <!-- Insert Tree photo here -->
-                            <ul class="social">
-                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                            <span class="product-new-label">Sale</span>
-                            <span class="product-discount-label">50%</span>
-                        </div>
-                        <ul class="rating">
-                            <li class="fa fa-star"></li>
-                            <li class="fa fa-star"></li>
-                            <li class="fa fa-star"></li>
-                            <li class="fa fa-star"></li>
-                            <li class="fa fa-star"></li>
-                        </ul>
-                        <div class="product-content">
-                            <h3 class="title"><a href="#">Kohekohe</a></h3>
-                            <div class="price">$5.00
-                                <span>$10.00</span>
-                            </div>
-                            <a class="add-to-cart" href="">+ Add To Cart</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="product-grid">
-                        <div class="product-image">
-                            <!-- Insert Tree Photo Here -->
-                            <ul class="social">
-                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                            <span class="product-new-label">Sale</span>
-                            <span class="product-discount-label">50%</span>
-                        </div>
-                        <ul class="rating">
-                            <li class="fa fa-star"></li>
-                            <li class="fa fa-star"></li>
-                            <li class="fa fa-star"></li>
-                            <li class="fa fa-star"></li>
-                            <li class="fa fa-star"></li>
-                        </ul>
-                        <div class="product-content">
-                            <h3 class="title"><a href="#">Marbleleaf</a></h3>
-                            <div class="price">$5.00
-    
-                            </div>
-                            <a class="add-to-cart" href="">+ Add To Cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </form>
         </div>
     </body>
 </html>
