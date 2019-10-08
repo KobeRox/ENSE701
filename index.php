@@ -1,1 +1,1 @@
-<?php require("src/index.html"); ?>
+<?php header("Location: /src/index.html"); ?>
