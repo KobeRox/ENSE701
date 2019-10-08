@@ -1,1 +1,1 @@
-<?php require("Location: /src/index.html"); ?>
+<?php require("Location: /src/index.php"); ?>
