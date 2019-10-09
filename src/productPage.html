@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
     <head>
         <title>PlantATree</title>
 
@@ -17,8 +16,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-        <!-- Bootstrap core CSS -->
-        <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Imports the script file -->
+        <script src="cart.js" async></script>
 
         <!-- Custom styles for this template -->
         <!-- insert css link here -->
@@ -27,27 +26,28 @@
 
     <body>
         <nav class="navbar navbar-expand-lg" style="background-color: rgb(96, 114, 62)">
-                <div class="container">
-                    <a class="navbar-brand text-light" href="#">PlantATree</a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-        
-                    <div class="collapse navbar-collapse">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="index.html">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="treeDetails.html">Tree Details</a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link text-light" href="productPage.html">Products</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="aboutPage.html">About</a>
-                            </li>
-                        </ul>
+            <div class="container">
+                <a class="navbar-brand text-light" href="#">PlantATree</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07"
+                    aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="treeDetails.html">Tree Details</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link text-light" href="productPage.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="aboutPage.html">About</a>
+                        </li>
+                    </ul>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
                             <a class="nav-link text-light" href="cart.html">Shopping Cart</a>
@@ -60,26 +60,53 @@
         <div class="container">
 
             <h3 class="h3">Tree Product Demo </h3>
-            
+
             <form>
                 <div class="row">
                     <div class="col-md-3">
                         <div class="pics_in_a_row">
                             <div class="img1">
-                                <a href="cart.html">
-                                    <img src="/src/images/Pohutukawa.jpg" alt="">
-                                
-                                    <p class="text-center">Grapefruit ($29.99)</p>
-                                </a>
+                                <img src="/src/images/grapefruit.jpg" alt="">
+                                <p class="text-center">Grapefruit ($29.99)</p>
+
+                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">
+                                    Tree Info
+                                </button>
+                                <button type="button" class="btn btn-secondary">
+                                    Add to cart
+                                </button>
+
+                                <!-- Modal -->
+                                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLongTitle">Grapefruit</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                In order to properly grow grapefruit, you need to provide relatively warm conditions both day and night.
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"><a href="treeDetails.html" class="text-light"> More tree details </a></button>
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-md-3">
                         <div class="pics_in_a_row">
                             <div class="img1">
                                 <a href="cart.html">
                                     <img src="/src/images/feijoa.jpg" alt="">
-                                
+
                                     <p class="text-center">Feijoa ($22.99)</p>
                                 </a>
                             </div>
@@ -90,7 +117,7 @@
                             <div class="img1">
                                 <a href="cart.html">
                                     <img src="/src/images/olive.jpg" alt="">
-                                
+
                                     <p class="text-center">Olive Tree($19.99)</p>
                                 </a>
                             </div>
@@ -99,13 +126,40 @@
                 </div>
             </form>
         </div>
-        <br/>
+        <section class="container content-section">
+                <h2 class="section-header">CART</h2>
+                <div class="cart-row">
+                    <span class="cart-item cart-header cart-column">ITEM</span>
+                    <span class="cart-price cart-header cart-column">PRICE</span>
+                    <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                </div>
+                <div class="cart-items">
+                    <div class="cart-row">
+                        <div class="cart-item cart-column">
+                            <img src="/src/images/grapefruit.jpg" alt="" class="cart-item-image" width="100" height="100">
+                            <span class="cart-item-title">Grapefruit</span>
+                        </div>
+                        <span class="cart-price cart-column">$29.99</span>
+                        <div class="cart-quantity cart-column">
+                            <input type="number" class="cart-quantity-input" value="1">
+                            <button class="btn btn-dark"> REMOVE </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-total">
+                    <strong class="cart-total-title">Total</strong>
+                    <span class="cart-total-price">$0</span>
+                </div>
+            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+        </section>
+
+        <br />
 
         <!-- Footer -->
         <footer class="page-footer font-small blue" style="background-color: rgb(96, 114, 62)">
             <div class="footer-copyright text-center py-3">© 2018 Copyright:
-              <a href="" class="text-light"> PlantATree</a>
-            </div>      
+                <a href="" class="text-light"> PlantATree</a>
+            </div>
         </footer>
     </body>
 </html>
